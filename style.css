@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 320px;
+}
+
+.display {
+    background: #2d3436;
+    padding: 20px;
+    text-align: right;
+}
+
+#display {
+    width: 100%;
+    background: #2d3436;
+    color: #00ff00;
+    border: none;
+    font-size: 2.5rem;
+    padding: 20px;
+    text-align: right;
+    font-weight: bold;
+    outline: none;
+    font-family: 'Courier New', monospace;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background: #f5f6fa;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #e8eaf6;
+    color: #2d3436;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background: #d1d5e8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-clear {
+    background: #ff6b6b;
+    color: white;
+    grid-column: 1;
+}
+
+.btn-clear:hover {
+    background: #ff5252;
+}
+
+.btn-delete {
+    background: #ffa502;
+    color: white;
+    grid-column: 4;
+}
+
+.btn-delete:hover {
+    background: #ff8c00;
+}
+
+.btn-operator {
+    background: #667eea;
+    color: white;
+}
+
+.btn-operator:hover {
+    background: #5568d3;
+}
+
+.btn-equals {
+    background: #26de81;
+    color: white;
+    font-size: 2rem;
+    grid-column: 2 / 4;
+}
+
+.btn-equals:hover {
+    background: #20c997;
+}
+
+.btn-zero {
+    grid-column: 1 / 3;
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+    .calculator {
+        width: 100%;
+        max-width: 320px;
+        margin: 20px;
+    }
+
+    #display {
+        font-size: 2rem;
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+}
